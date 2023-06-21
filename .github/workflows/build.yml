@@ -14,8 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Go
-        uses: actions/checkout@v3
-      - uses: actions/setup-go@v4
+        uses: actions/checkout@latest
+      - uses: actions/setup-go@latest
         with:
           go-version: '1.17'
           check-latest: true
@@ -57,7 +57,7 @@ jobs:
         run: go build -o build/patcher.linux-arm64 cmds/patcher/main.go
 
       - name: Create release
-        uses: softprops/action-gh-release@v0.1.15
+        uses: marvinpinto/action-automatic-releases@latest
         with:
           tag_name: release-${{ github.ref_name }}
           files:  |
