@@ -57,12 +57,9 @@ jobs:
         run: go build -o build/patcher.linux-arm64 cmds/patcher/main.go
 
       - name: Create release
-        uses: marvinpinto/action-automatic-releases@v1.2.1
+        uses: softprops/action-gh-release@v1
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
-          prerelease: false
-          title: "latest"
+          tag_name: release-${{ github.ref_name }}
           files:  |
             build/patcher.win-amd64.exe
             build/patcher.mac-amd64
