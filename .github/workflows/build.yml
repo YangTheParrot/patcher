@@ -57,7 +57,7 @@ jobs:
         run: go build -o build/patcher.linux-arm64 cmds/patcher/main.go
 
       - name: Create release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v0.1.15
         with:
           tag_name: release-${{ github.ref_name }}
           files:  |
