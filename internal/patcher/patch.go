@@ -14,7 +14,7 @@ const (
 )
 
 const (
-	IPA_URL    = "https://cdn.discordapp.com/attachments/986937851042213888/1107852541754089472/Discord_178.0.ipa"
+	IPA_URL    = "https://cdn.discordapp.com/attachments/986937851042213888/1128523037646532608/Discord_186.0.ipa"
 	ICONS_URL  = "https://files.enmity.app/icons.zip"
 )
 
